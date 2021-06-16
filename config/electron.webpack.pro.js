@@ -9,7 +9,7 @@ module.exports = {
   devtool: "source-map",
   entry: path.resolve(rootPath, "electron", "main.ts"),
   target: "electron-main",
-  mode: "development",
+  mode: "production",
   module: {
     rules: [
       {

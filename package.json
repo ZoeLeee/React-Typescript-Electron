@@ -6,12 +6,12 @@
   "scripts": {
     "dev": "npm-run-all -p dev:react electron:serve",
     "dev:electron": "cross-env NODE_ENV=development webpack --config config/electron.webpack.js --mode development && npm run start:electron",
-    "dev:react": "webpack serve  --config config/webpack.common.js ",
+    "dev:react": "cross-env NODE_ENV=development webpack serve  --config config/webpack.common.js ",
     "electron:serve": "wait-on http-get://localhost:5050/ && npm run dev:electron",
     "start:electron": "electron .",
     "build": "npm-run-all build:electron build:react",
     "build:run": "npm-run-all build start:electron",
-    "build:electron": "webpack --config config/electron.webpack.js",
+    "build:electron": "webpack --config config/electron.webpack.pro.js",
     "build:react": "webpack --config config/webpack.common.js",
     "package": "npm-run-all build package:dist",
     "package:dist": "electron-builder --dir"

@@ -1,12 +1,12 @@
-import React from 'react';
-import { render } from 'react-dom';
+import React from "react";
+import { render } from "react-dom";
 
 (window as any).global = window;
 
 const App = () => {
   return (
     <div>
-      <h1>123</h1>
+      <h1>144424444443</h1>
     </div>
   );
 };
